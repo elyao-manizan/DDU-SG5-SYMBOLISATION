@@ -2,7 +2,7 @@
 
 Dépôt du sous-groupe SG5 *Symbolisation pour les PLU et les PSMV* du GT CNIG DDU.  
 Créé pour faciliter l'élaboration et l'échange de dictionnaires de symboles pour les documents d'urbanisme.
-
+https://elyao-manizan.github.io/DDU-SG5-SYMBOLISATION/
 Retrouvez notamment ici :
 - les préconisations de symbolisation produites par le SG5 pour harmoniser la représentation cartographique des données standardisées :
     - [préconisations](/PLU/preconisations.md) associées au standard PLU,
