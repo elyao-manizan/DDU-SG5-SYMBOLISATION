@@ -6,6 +6,7 @@
     <title>SG5 - Symbolisation</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<style>
 			/* Styles généraux */
 		body {
@@ -115,6 +116,37 @@
 			text-decoration: none;
 			transform: translateY(-2px);
 		}
+		
+		.btn-nouvelle-demande {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Dégradé bleu */
+    color: white;
+    padding: 14px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-nouvelle-demande:hover {
+    background: linear-gradient(135deg, #0056b3, #004494); /* Bleu plus foncé */
+    transform: scale(1.08); /* Effet de zoom */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-nouvelle-demande i {
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+    font-size: 20px;
+}
+
 	</style>
 </head>
 <body>
@@ -133,24 +165,24 @@
             <li>
                 <strong>Préconisations de symbolisation</strong> :
                 <ul>
-                    <li><a href="/DDU-SG5-SYMBOLISATION/PLU/preconisations.html">Préconisations PLU</a></li>
-                    <li><a href="/DDU-SG5-SYMBOLISATION/PSMV/preconisations.html">Préconisations PSMV</a></li>
+                    <li><a href="/PLU/preconisations.md">Préconisations PLU</a></li>
+                    <li><a href="/PSMV/preconisations.md">Préconisations PSMV</a></li>
                 </ul>
             </li>
             <li>
                 <strong>Fichiers de style</strong> :
                 <ul>
-                    <li><a href="/DDU-SG5-SYMBOLISATION/PLU/QML">QML</a> et <a href="/DDU-SG5-SYMBOLISATION/PLU/ArcGISpro">STYLX</a> pour PLU</li>
-                    <li><a href="/DDU-SG5-SYMBOLISATION/PSMV/QML">QML</a> et <a href="/DDU-SG5-SYMBOLISATION/PSMV/ArcGISpro">STYLX</a> pour PSMV</li>
+                    <li><a href="/PLU/QML">QML</a> et <a href="/PLU/ArcGISpro">STYLX</a> pour PLU</li>
+                    <li><a href="/PSMV/QML">QML</a> et <a href="/PSMV/ArcGISpro">STYLX</a> pour PSMV</li>
                 </ul>
             </li>
             <li>
                 <strong>Projets QGIS et ArcGIS Pro</strong> :
                 <ul>
-                    <li><a href="/DDU-SG5-SYMBOLISATION/PLU/projet_qgis_symbolisation_plu.zip">Projet QGIS PLU</a></li>
-                    <li><a href="/DDU-SG5-SYMBOLISATION/PLU/projet_arcgispro_symbolisation_plu.zip">Projet ArcGIS Pro PLU</a></li>
-                    <li><a href="/DDU-SG5-SYMBOLISATION/PSMV/projet_qgis_symbolisation_psmv.zip">Projet QGIS PSMV</a></li>
-                    <li><a href="/DDU-SG5-SYMBOLISATION/PSMV/projet_arcgispro_symbolisation_psmv.zip">Projet ArcGIS Pro PSMV</a></li>
+                    <li><a href="/PLU/projet_qgis_symbolisation_plu.zip">Projet QGIS PLU</a></li>
+                    <li><a href="/PLU/projet_arcgispro_symbolisation_plu.zip">Projet ArcGIS Pro PLU</a></li>
+                    <li><a href="/PSMV/projet_qgis_symbolisation_psmv.zip">Projet QGIS PSMV</a></li>
+                    <li><a href="/PSMV/projet_arcgispro_symbolisation_psmv.zip">Projet ArcGIS Pro PSMV</a></li>
                 </ul>
             </li>
         </ul>
@@ -169,6 +201,11 @@
 		Dématérialisation des documents d’urbanisme (GT DDU) du Conseil national de l’information géographique (CNIG) sont disponibles sur le site du CNIG
          <a href="http://cnig.gouv.fr/?page_id=2732" class="btn">Site officiel du CNIG</a>
     </p>
+	
+	<a href="/DDU-SG5-SYMBOLISATION/.github/ISSUE_TEMPLATE/proposition_de_symbole.html" class="btn-nouvelle-demande">
+		<i class="fas fa-plus"></i> Faire une nouvelle demande
+	</a>
+	
 </div>
 
 </body>
