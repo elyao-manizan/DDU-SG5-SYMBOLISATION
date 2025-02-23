@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Demande de Nouveaux Symboles</title>
+	
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+			background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+			color: #333;
+			margin: 0;
+			padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+			margin: 40px auto;
+			background: white;
+			padding: 30px;
+			border-radius: 15px;
+			box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+			text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+			color: blue;
+			margin-bottom: 15px;
+        }
+		
+		h2 {
+			font-size: 22px;
+			color: black;
+			border-left: 4px solid #007bff;
+			padding-left: 12px;
+		}
+
+        form {
+            background: #f8f9fa;
+			padding: 25px;
+			border-radius: 10px;
+			box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: 600;
+			display: block;
+			margin: 10px 0 5px;
+			color: #333;
+        }
+
+        input, textarea, select {
+            width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 8px;
+			font-size: 16px;
+			transition: 0.3s;
+			outline: none;
+        }
+		
+		input:focus, textarea:focus, select:focus {
+			border-color: #007bff;
+			box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+		}
+		
+        button {
+            display: block;
+			width: 100%;
+			background: #007bff;
+			color: white;
+			padding: 14px;
+			border: none;
+			border-radius: 8px;
+			font-size: 18px;
+			cursor: pointer;
+			margin-top: 20px;
+			transition: 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: #0056b3;
+			transform: translateY(-2px);
+        }
+
+/* Barre de progression */
+        .progress-container {
+			width: 100%;
+			background: #ddd;
+			border-radius: 5px;
+			height: 12px;
+			margin: 20px 0;
+			position: relative;
+		}
+
+        .progress-bar {
+            height: 12px;
+			width: 0%;
+			background: #28a745;
+			border-radius: 5px;
+			transition: width 0.4s ease-in-out;
+		}
+		
+		.paragraphe-box {
+    background: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+    border-left: 5px solid #28a745; /* Bordure gauche colorée */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 90%;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+/* Ajout d'un effet au survol */
+.paragraphe-box:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Indication des champs manquants */
+        .input-error {
+            border: 2px solid red !important;
+            background: #ffeeee;
+        }
+
+        .progress-container {
+             width: 100%;
+             background-color: #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+             height: 10px;
+        }
+        .progress-bar {
+             height: 10px;
+             width: 0%;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            transition: width 0.5s ease-in-out;
+        }
+        .input-error {
+             border: 2px solid red !important;
+             background-color: #ffeeee;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: url('Immobilier-autorisations-urbanisme-travaux.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1, p {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+        }
+        button {
+            display: block;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #recapitulatif {
+            display: none;
+            background-color: #eef;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Formulaire de Demande de Nouveaux Symboles</h1>
+    <div id="suivi-demandes">
+        <h2> Mes Demandes Soumises</h2>
+        <ul id="previousRequests"></ul>
+    </div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+        
+    </div>
+	<div class="paragraphe-box">
+		<p>
+			Dans le cadre de l'évolution des documents d'urbanisme, il est parfois nécessaire d'ajouter de nouveaux symboles 
+			pour mieux représenter certaines données ou réglementations. Ce formulaire permet de soumettre une demande officielle 
+			pour l'ajout de nouveaux symboles en détaillant leur utilisation, leur impact et leurs caractéristiques techniques. 
+			Après soumission, la demande sera étudiée par les instances concernées afin d'assurer son intégration harmonieuse 
+			dans les standards en vigueur.    
+		</p>
+	</div>
+
+    <form id="formDemande">
+        <label for="titre">Titre de la Demande :</label>
+        <input type="text" id="titre" name="titre" placeholder="Insérez un titre clair et descriptif" required>
+
+        <label for="nom-demandeur">Nom :</label>
+        <input type="text" id="nom-demandeur" name="nom-demandeur" placeholder="Nom" required>
+
+        <label for="prenom-demandeur">Prénom :</label>
+        <input type="text" id="prenom-demandeur" name="prenom-demandeur" placeholder="Prénom" required>
+
+        <label for="collectivite">Nom de la Collectivité :</label>
+        <input type="text" id="collectivite" name="collectivite" placeholder="Indiquez le nom de la collectivité concernée" required>
+
+        <label for="localisation">Localisation Géographique :</label>
+        <input type="text" id="localisation" name="localisation" placeholder="Ville, région ou département" required>
+
+        <label for="email">Adresse e-mail :</label>
+        <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone" required>
+
+        <label for="date">Date de la Soumission :</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="perimetre">Périmètre d’Utilisation Prévu :</label>
+        <textarea id="perimetre" name="perimetre" placeholder="Décrivez l'utilisation du symbole" required></textarea>
+
+
+        <label for="description">Description Générale de la Proposition :</label>
+        <textarea id="description" name="description" placeholder="Objectif du symbole et contexte d'utilisation" required></textarea>
+
+        <label for="caracteristiques">Caractéristiques Techniques du Symbole :</label>
+        <textarea id="caracteristiques" name="caracteristiques" placeholder="Couleurs, styles, tailles, remplissage" required></textarea>
+
+        <label for="illustration">Illustration Visuelle :</label>
+        <input type="file" id="illustration" name="illustration" accept="image/*" required>
+
+        <label for="commentaires">Autres Commentaires ou Remarques :</label>
+        <textarea id="commentaires" name="commentaires" placeholder="Informations supplémentaires"></textarea>
+
+        <button type="button" id="recapBtn">Voir le Récapitulatif</button>
+        <button type="button" id="submitBtn" style="display:none;">Soumettre la Demande</button>
+    </form>
+
+    <div id="recapitulatif">
+        <h2>Récapitulatif des Informations</h2>
+        <p id="recap-content"></p>
+        <button id="confirmBtn">Confirmer et Envoyer</button>
+        <button id="modifyBtn">Modifier</button>
+    </div>
+	
+	
+	
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Chargement des valeurs sauvegardées
+        const formFields = ["nom-demandeur", "prenom-demandeur", "email", "telephone"];
+        formFields.forEach(field => {
+            if (localStorage.getItem(field)) {
+                document.getElementById(field).value = localStorage.getItem(field);
+            }
+        });
+
+        // Auto-remplissage de la date du jour
+        document.getElementById("date").value = new Date().toISOString().split("T")[0];
+
+        // Mise à jour de la barre de progression
+        updateProgressBar();
+
+        // Sauvegarde en temps réel des champs
+        document.querySelectorAll("input, textarea").forEach(input => {
+            input.addEventListener("input", function () {
+                updateProgressBar();
+                localStorage.setItem(input.id, input.value);
+            });
+        });
+
+        // Chargement des anciennes demandes
+        loadPreviousRequests();
+    });
+
+    function updateProgressBar() {
+        let form = document.getElementById("formDemande");
+        let inputs = form.querySelectorAll("input[required], textarea[required]");
+        let filledFields = 0;
+
+        inputs.forEach(input => {
+            if (input.value.trim() !== "") filledFields++;
+        });
+
+        let progressPercentage = (filledFields / inputs.length) * 100;
+        document.getElementById("progressBar").style.width = progressPercentage + "%";
+    }
+
+    document.getElementById("recapBtn").addEventListener("click", function () {
+        let form = document.getElementById("formDemande");
+        let inputs = form.querySelectorAll("input[required], textarea[required]");
+        let isValid = true;
+        let recapContent = "";
+
+        inputs.forEach(input => {
+            if (!input.value.trim()) {
+                input.classList.add("input-error");
+                isValid = false;
+            } else {
+                input.classList.remove("input-error");
+                recapContent += `<strong>${input.previousElementSibling.innerText}</strong> : ${input.value}<br>`;
+            }
+        });
+
+        if (!isValid) {
+            alert("Veuillez remplir tous les champs obligatoires !");
+            return;
+        }
+
+        document.getElementById("recap-content").innerHTML = recapContent;
+        document.getElementById("recapitulatif").style.display = "block";
+        document.getElementById("formDemande").style.display = "none";
+    });
+
+    document.getElementById("confirmBtn").addEventListener("click", function () {
+        if (confirm("Confirmer l'envoi vers GitHub ?")) {
+            let titre = encodeURIComponent(document.getElementById("titre").value);
+            let nom = encodeURIComponent(document.getElementById("nom-demandeur").value);
+            let prenom = encodeURIComponent(document.getElementById("prenom-demandeur").value);
+            let collectivite = encodeURIComponent(document.getElementById("collectivite").value);
+            let localisation = encodeURIComponent(document.getElementById("localisation").value);
+            let email = encodeURIComponent(document.getElementById("email").value);
+            let telephone = encodeURIComponent(document.getElementById("telephone").value);
+            let date = encodeURIComponent(document.getElementById("date").value);
+            let perimetre = encodeURIComponent(document.getElementById("perimetre").value);
+            let impact = encodeURIComponent(document.getElementById("impact").value);
+            let description = encodeURIComponent(document.getElementById("description").value);
+            let caracteristiques = encodeURIComponent(document.getElementById("caracteristiques").value);
+            let validation = encodeURIComponent(document.getElementById("validation").value);
+            let commentaires = encodeURIComponent(document.getElementById("commentaires").value);
+
+            let githubIssueURL = `https://github.com/cnigfr/DDU-SG5-SYMBOLISATION/issues/new?title=${titre}&body=**Demandeur :**%0A- Nom : ${nom}%0A- Prénom : ${prenom}%0A- Collectivité : ${collectivite}%0A- Localisation : ${localisation}%0A- Email : ${email}%0A- Téléphone : ${telephone}%0A- Date : ${date}%0A%0A**Détails :**%0A- Périmètre : ${perimetre}%0A- Impact : ${impact}%0A- Description : ${description}%0A- Caractéristiques : ${caracteristiques}%0A%0A**Validation :**%0A${validation}%0A%0A**Commentaires :**%0A${commentaires}`;
+
+            // Sauvegarde de la demande pour suivi
+            saveRequest(titre, date);
+
+            // Redirection vers GitHub
+            window.location.href = githubIssueURL;
+        }
+    });
+
+    function saveRequest(title, date) {
+        let requests = JSON.parse(localStorage.getItem("requests")) || [];
+        requests.push({ title, date });
+        localStorage.setItem("requests", JSON.stringify(requests));
+        loadPreviousRequests();
+    }
+
+    function loadPreviousRequests() {
+        let requests = JSON.parse(localStorage.getItem("requests")) || [];
+        let container = document.getElementById("previousRequests");
+        container.innerHTML = requests.map(r => `<li>${r.title} - ${r.date}</li>`).join("");
+    }
+</script>
+
+</body>
+</html>
+
