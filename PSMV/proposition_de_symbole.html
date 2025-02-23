@@ -368,13 +368,11 @@
             let telephone = encodeURIComponent(document.getElementById("telephone").value);
             let date = encodeURIComponent(document.getElementById("date").value);
             let perimetre = encodeURIComponent(document.getElementById("perimetre").value);
-            let impact = encodeURIComponent(document.getElementById("impact").value);
             let description = encodeURIComponent(document.getElementById("description").value);
             let caracteristiques = encodeURIComponent(document.getElementById("caracteristiques").value);
-            let validation = encodeURIComponent(document.getElementById("validation").value);
             let commentaires = encodeURIComponent(document.getElementById("commentaires").value);
 
-            let githubIssueURL = `https://github.com/cnigfr/DDU-SG5-SYMBOLISATION/issues/new?title=${titre}&body=**Demandeur :**%0A- Nom : ${nom}%0A- Prénom : ${prenom}%0A- Collectivité : ${collectivite}%0A- Localisation : ${localisation}%0A- Email : ${email}%0A- Téléphone : ${telephone}%0A- Date : ${date}%0A%0A**Détails :**%0A- Périmètre : ${perimetre}%0A- Impact : ${impact}%0A- Description : ${description}%0A- Caractéristiques : ${caracteristiques}%0A%0A**Validation :**%0A${validation}%0A%0A**Commentaires :**%0A${commentaires}`;
+            let githubIssueURL = `https://github.com/cnigfr/DDU-SG5-SYMBOLISATION/issues/new?title=${titre}&body=**Demandeur :**%0A- Nom : ${nom}%0A- Prénom : ${prenom}%0A- Collectivité : ${collectivite}%0A- Localisation : ${localisation}%0A- Email : ${email}%0A- Téléphone : ${telephone}%0A- Date : ${date}%0A%0A**Détails :**%0A- Périmètre : ${perimetre}%0A- Description : ${description}%0A- Caractéristiques : ${caracteristiques}%0A%0A**Commentaires :**%0A${commentaires}`;
 
             // Sauvegarde de la demande pour suivi
             saveRequest(titre, date);
